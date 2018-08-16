@@ -1,4 +1,5 @@
-﻿using SerbianEnglishDictionary.Initializer.CommandHandlerInitializer.TranslationTypeCommandHandlerInitializer;
+﻿using SerbianEnglishDictionary.Initializers.NextWordChoosers;
+using SerbianEnglishDictionary.Initializers.Translators;
 using SerbianEnglishDictionary.Library.ViewModels;
 using System.Windows;
 
@@ -20,7 +21,7 @@ namespace SerbianEnglishDictionary
 		private void InitializeComponentExt()
 		{
 			//TODO: Move Main view model from here
-			DataContext = new MainViewModel(TranslationTypeToReaderCommandHandlerInitializer.Get().GetDictionaryReader(Config.Instance.CurrentTranslationType));
+			DataContext = new MainViewModel(NextWordChooserInitializer.GetChooser(), DictionaryInitializer.GetDictionary());
 		}
 	}
 }

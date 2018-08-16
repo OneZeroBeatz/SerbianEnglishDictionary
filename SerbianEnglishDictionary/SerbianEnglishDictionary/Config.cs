@@ -26,30 +26,60 @@ namespace SerbianEnglishDictionary
 
 		#region Properties
 
-		public string DictionaryPath { get { return GetDictionaryPath("DictionaryPath"); } }
+		public string DictionaryPath => GetDictionaryPath("DictionaryPath");
 
-		public TranslationType CurrentTranslationType { get { return GetCurrentTrasnlationType("CurrentTranslationType"); } }
+		public TranslationWay TranslationWay => GetTrasnlationWay("TranslationWay");
+
+		public EntitiesFilterType EntitiesFilterType => GetEntitiesFilterType("EntitiesFilterType");
+
+		public int EntitiesCountLimit => GetEntitiesCountLimit("EntitiesCountLimit");
+
 
 		#endregion
 
 		#region Private methods
 
-		private string GetDictionaryPath(string key)
+		private static string GetDictionaryPath(string key)
 		{
 			return ConfigurationManager.AppSettings[key];
 		}
 
-		private TranslationType GetCurrentTrasnlationType(string key)
+		private static TranslationWay GetTrasnlationWay(string key)
 		{
-			var currentTranslationType = ConfigurationManager.AppSettings[key];
-			foreach (var enumeration in Enum.GetNames(typeof(TranslationType)))
+			var currentTranslationWay = ConfigurationManager.AppSettings[key];
+		
+			TranslationWay translationWay;
+			if (Enum.TryParse(currentTranslationWay, out translationWay))
 			{
-				TranslationType translationType;
-				if (Enum.TryParse(currentTranslationType, out translationType))
-				{
-					return translationType;
-				}
+				return translationWay;
 			}
+			
+			throw new Exception("Cannot parse config file");
+		}
+
+		private static EntitiesFilterType GetEntitiesFilterType(string key)
+		{
+			var currentEntitiesFilter = ConfigurationManager.AppSettings[key];
+
+			EntitiesFilterType entitiesFilterType;
+			if (Enum.TryParse(currentEntitiesFilter, out entitiesFilterType))
+			{
+				return entitiesFilterType;
+			}
+
+			throw new Exception("Cannot parse config file");
+		}
+
+		private static int GetEntitiesCountLimit(string key)
+		{
+			var currentEntitiesCountLimit = ConfigurationManager.AppSettings[key];
+
+			int entitiesCountLimit;
+			if (Int32.TryParse(currentEntitiesCountLimit, out entitiesCountLimit))
+			{
+				return entitiesCountLimit;
+			}
+
 			throw new Exception("Cannot parse config file");
 		}
 

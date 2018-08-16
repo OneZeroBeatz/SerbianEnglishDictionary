@@ -41,16 +41,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandHandlers\EntitiesFilterCommandHandler\EntitiesFilterCommandHandler.cs" />
     <Compile Include="Commands\Base\RelayCommand.cs" />
-    <Compile Include="DataAccess\CommandHandlers\TranslationTypeCommandHandler\DictionaryReaders\Base\BaseDictionaryReader.cs" />
-    <Compile Include="DataAccess\CommandHandlers\TranslationTypeCommandHandler\TranslationTypeToReaderCommandHandler.cs" />
-    <Compile Include="DataAccess\CommandHandlers\TranslationTypeCommandHandler\DictionaryReaders\Base\IDictionaryReader.cs" />
-    <Compile Include="DataAccess\CommandHandlers\TranslationTypeCommandHandler\DictionaryReaders\EnglishToSerbianDictionaryReader.cs" />
-    <Compile Include="DataAccess\CommandHandlers\TranslationTypeCommandHandler\DictionaryReaders\SerbianToEnglishDictionaryReader.cs" />
+    <Compile Include="DictionaryCreators\DictionaryCreator.cs" />
+    <Compile Include="DictionaryReaders\Base\DictionaryReader.cs" />
+    <Compile Include="CommandHandlers\TranslationWayToReaderCommandHandler\TranslationWayToReaderCommandHandler.cs" />
+    <Compile Include="DictionaryReaders\EnglishToSerbianDictionaryReader.cs" />
+    <Compile Include="DictionaryReaders\SerbianToEnglishDictionaryReader.cs" />
+    <Compile Include="EntitiesFilters\AllEntitiesFilter.cs" />
+    <Compile Include="EntitiesFilters\Interface\IEntitiesFilter.cs" />
+    <Compile Include="EntitiesFilters\LastAddedEntitiesFilter.cs" />
     <Compile Include="Enums\DictionaryType.cs" />
-    <Compile Include="Enums\TranslationType.cs" />
+    <Compile Include="Enums\EntitiesFilter.cs" />
+    <Compile Include="Enums\TranslationWay.cs" />
     <Compile Include="IntermediateModel\WordsPair.cs" />
+    <Compile Include="NextWordChoosers\Base\NextWordChooser.cs" />
+    <Compile Include="NextWordChoosers\RandomNextWordChooser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Dictionaries\FullTranslationDictionary.cs" />
+    <Compile Include="Dictionaries\Interface\IDictionary.cs" />
     <Compile Include="ViewModels\Base\ViewModelBase.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
   </ItemGroup>

@@ -1,21 +1,21 @@
 ﻿using SerbianEnglishDictionary.Library.Commands.Base;
-using SerbianEnglishDictionary.Library.DataAccess.CommandHandlers.TranslationTypeCommandHandler.DictionaryReaders.Base;
-using SerbianEnglishDictionary.Library.IntermediateModel;
 using SerbianEnglishDictionary.Library.ViewModels.Base;
-using System;
 using System.Windows.Input;
-using System.Collections.Generic;
+using SerbianEnglishDictionary.Library.Dictionaries.Interface;
+using SerbianEnglishDictionary.Library.NextWordChoosers.Base;
 
 namespace SerbianEnglishDictionary.Library.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-		private List<WordsPair> _wordsDictionary;
+		private NextWordChooser _nextWordChooser;
+		private IDictionary _translator;
 
-		public MainViewModel(IDictionaryReader dictionaryReader)
-        {
-			_wordsDictionary = dictionaryReader.ReadFromSource();
-        }
+		public MainViewModel(NextWordChooser nextWordChooser, IDictionary translator)
+		{
+			_nextWordChooser = nextWordChooser;
+			_translator = translator;
+		}
 
 		#region Show Answer Command
 
@@ -35,12 +35,12 @@ namespace SerbianEnglishDictionary.Library.ViewModels
 
         public void ShowAnswerExecute(object obj)
         {
-			CorrectTranslation = CurrentPair.SecondWord;
+			SecondWord = _translator.GetTranslation(FirstWord);
         }
 
         public bool ShowAnswerCanExecute(object obj)
         {
-            return CurrentPair != null;
+            return !string.IsNullOrWhiteSpace(FirstWord);
         } 
 
         #endregion
@@ -63,75 +63,47 @@ namespace SerbianEnglishDictionary.Library.ViewModels
 
         public void NextCommandExecute(object obj)
         {
-            CurrentPair = GetRandomPairFromDictionary();
-			CorrectTranslation = "";
+			FirstWord = _nextWordChooser.GetNextWord();
+			SecondWord = "";
 
         }
 
         #endregion
+		
 
-        #region Serbian Word To Show
-        private string _correctTranslation;
+        private string _secondWord;
 
-        public string CorrectTranslation
+        public string SecondWord
         {
             get
             {
-                return _correctTranslation;
+                return _secondWord;
             }
             set
             {
-                _correctTranslation = value;
-                OnPropertyChanged(nameof(CorrectTranslation));
-            }
+                _secondWord = value;
+				OnPropertyChanged(nameof(SecondWord));
+			}
         }
+		
+		private string _firstWord;
 
-        #endregion
-
-
-        private WordsPair _currentPair;
-
-		public WordsPair CurrentPair
-        {
-            get
-            {
-                return _currentPair;
-            }
-            set
-            {
-                _currentPair = value;
-                OnPropertyChanged(nameof(CurrentPair));
-                OnPropertyChanged(nameof(FirstWord));
-            }
-        }
         public string FirstWord
         {
             get
             {
-                if (_currentPair != null)
+                if (_firstWord != null)
                 {
-                    return _currentPair.FirstWord;
+                    return _firstWord;
                 }
                 return "";
             }
             set
             {
-                _currentPair.FirstWord = value;
+				_firstWord = value;
                 OnPropertyChanged(nameof(FirstWord));
 
             }
         }
-
-
-        #region Private methods
-
-        private WordsPair GetRandomPairFromDictionary()
-        {
-            Random randomForWordsPair = new Random();
-            int randomWordsPairIndex = randomForWordsPair.Next() % _wordsDictionary.Count;
-            return _wordsDictionary[randomWordsPairIndex];
-        }
-
-        #endregion
     }
 }
