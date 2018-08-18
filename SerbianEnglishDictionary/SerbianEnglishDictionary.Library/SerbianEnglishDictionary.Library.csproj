@@ -48,13 +48,14 @@
     <Compile Include="CommandHandlers\TranslationWayToReaderCommandHandler\TranslationWayToReaderCommandHandler.cs" />
     <Compile Include="DictionaryReaders\EnglishToSerbianDictionaryReader.cs" />
     <Compile Include="DictionaryReaders\SerbianToEnglishDictionaryReader.cs" />
+    <Compile Include="DictionaryWriters\Base\DictionaryWriter.cs" />
     <Compile Include="EntitiesFilters\AllEntitiesFilter.cs" />
     <Compile Include="EntitiesFilters\Interface\IEntitiesFilter.cs" />
     <Compile Include="EntitiesFilters\LastAddedEntitiesFilter.cs" />
     <Compile Include="Enums\DictionaryType.cs" />
     <Compile Include="Enums\EntitiesFilter.cs" />
     <Compile Include="Enums\TranslationWay.cs" />
-    <Compile Include="IntermediateModel\WordsPair.cs" />
+    <Compile Include="IntermediateModel\WordData.cs" />
     <Compile Include="NextWordChoosers\Base\NextWordChooser.cs" />
     <Compile Include="NextWordChoosers\RandomNextWordChooser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="ViewModels\Base\ViewModelBase.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

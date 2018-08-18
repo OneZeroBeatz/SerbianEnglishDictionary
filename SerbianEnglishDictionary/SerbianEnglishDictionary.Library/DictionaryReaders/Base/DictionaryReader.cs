@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using SerbianEnglishDictionary.Library.IntermediateModel;
 
 namespace SerbianEnglishDictionary.Library.DictionaryReaders.Base
 {
@@ -12,28 +13,40 @@ namespace SerbianEnglishDictionary.Library.DictionaryReaders.Base
 			_dictionaryPath = dictionaryPath;
 		}
 		
-		public Dictionary<string, string> ReadFromSource()
+		public Dictionary<long, WordData> ReadFromSource()
 		{
-			var wordsPairsFromSource = new Dictionary<string,string>();
+			var wordsPairsFromSource = new Dictionary<long, WordData>();
 			using (var reader = new StreamReader(_dictionaryPath))
 			{
+				long lineIndex = 0;
 				while (!reader.EndOfStream)
 				{
-					var pairInLine = reader.ReadLine();
-
-					var firstWord = GetFirstWord(pairInLine);
-					var secondWord = GetSecondWord(pairInLine);
-
-					wordsPairsFromSource.Add(firstWord, secondWord);
+					var wordDataInLine = reader.ReadLine();
+					var wordData = GetWordData(lineIndex, wordDataInLine);
+					wordsPairsFromSource.Add(lineIndex++, wordData);
 				}
 			}
 
 			return wordsPairsFromSource;
 		}
 
-		protected abstract string GetFirstWord(string pairInLine);
+		protected abstract string GetFirstWord(string wordDataInLine);
 
-		protected abstract string GetSecondWord(string pairInLine);
+		protected abstract string GetSecondWord(string wordDataInLine);
 
+		private WordData GetWordData(long lineIndex, string wordDataInLine)
+		{
+			var firstWord = GetFirstWord(wordDataInLine);
+			var secondWord = GetSecondWord(wordDataInLine);
+			var choosingsCount = GetChoosingsCount(wordDataInLine);
+
+			return new WordData(lineIndex, firstWord, secondWord, choosingsCount);
+		}
+
+		private long GetChoosingsCount(string wordDataInLine)
+		{
+			return long.Parse(wordDataInLine.Split(',')[2]);
+		}
+		
 	}
 }

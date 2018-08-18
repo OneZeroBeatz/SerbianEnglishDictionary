@@ -65,6 +65,7 @@
     <Compile Include="Initializers\CommandHandlers\EntitiesFilterCommandHandlers\EntitiesFilterCommandHandlerInitializer.cs" />
     <Compile Include="Initializers\CommandHandlers\TranslationWayToReaderCommandHandlers\TranslationWayToReaderCommandHandlerInitializer.cs" />
     <Compile Include="Initializers\DictionaryCreators\DictionaryCreatorInitializer.cs" />
+    <Compile Include="Initializers\DictionaryWriters\DictionaryWriterInitializer.cs" />
     <Compile Include="Initializers\DictionaryReaders\DictionaryReaderInitializer.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

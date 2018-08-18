@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using SerbianEnglishDictionary.Library.IntermediateModel;
 
 namespace SerbianEnglishDictionary.Library.Dictionaries.Interface
 {
@@ -6,6 +7,6 @@ namespace SerbianEnglishDictionary.Library.Dictionaries.Interface
 	{
 		string GetTranslation(string firstWord);
 
-		List<string> GetWords();
+		List<WordData> GetWords();
 	}
 }

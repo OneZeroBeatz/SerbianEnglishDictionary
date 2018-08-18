@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using SerbianEnglishDictionary.Library.Dictionaries.Interface;
+using SerbianEnglishDictionary.Library.DictionaryWritters.Base;
+using SerbianEnglishDictionary.Library.IntermediateModel;
 
 namespace SerbianEnglishDictionary.Library.NextWordChoosers.Base
 {
@@ -7,15 +9,17 @@ namespace SerbianEnglishDictionary.Library.NextWordChoosers.Base
 	{
 		#region Protected fields
 
-		protected List<string> _firstWords;
+		protected readonly List<WordData> WordsData;
+		protected readonly DictionaryWriter DictionaryWriter;
 
 		#endregion
 
 		#region Protected constructors
 
-		protected NextWordChooser(IDictionary dictionary)
+		protected NextWordChooser(IDictionary dictionary, DictionaryWriter dictionaryWriter)
 		{
-			_firstWords = dictionary.GetWords();
+			DictionaryWriter = dictionaryWriter;
+			WordsData = dictionary.GetWords();
 		}
 
 		#endregion

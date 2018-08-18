@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using SerbianEnglishDictionary.Library.Dictionaries.Interface;
 using SerbianEnglishDictionary.Library.DictionaryCreators;
+using SerbianEnglishDictionary.Library.IntermediateModel;
 
 namespace SerbianEnglishDictionary.Library.Dictionaries
 {
@@ -9,7 +12,7 @@ namespace SerbianEnglishDictionary.Library.Dictionaries
 	{
 		#region Protected fields
 
-		private readonly Dictionary<string, string> _dictionary;
+		private readonly Dictionary<long, WordData> _dictionary;
 
 		#endregion
 
@@ -26,13 +29,14 @@ namespace SerbianEnglishDictionary.Library.Dictionaries
 
 		public string GetTranslation(string firstWord)
 		{
-			string translation;
-			return _dictionary.TryGetValue(firstWord, out translation) ? translation : "";
+			var wordData = _dictionary.Values.FirstOrDefault(x => x.FirstWord.Equals(firstWord, StringComparison.OrdinalIgnoreCase));
+			return wordData != null ? wordData.SecondWord : string.Empty;
 		}
 
-		public List<string> GetWords()
+
+		public List<WordData> GetWords()
 		{
-			return _dictionary.Keys.ToList();
+			return _dictionary.Values.ToList();
 		}
 
 		#endregion

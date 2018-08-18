@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using SerbianEnglishDictionary.Library.IntermediateModel;
 
 namespace SerbianEnglishDictionary.Library.EntitiesFilters.Interface
 {
@@ -11,6 +12,6 @@ namespace SerbianEnglishDictionary.Library.EntitiesFilters.Interface
 			EntitiesCountLimit = entitiesCountLimit;
 		}
 
-		public abstract Dictionary<string, string> GetFilteredEntities(Dictionary<string, string> dictionary);
+		public abstract Dictionary<long, WordData> GetFilteredEntities(Dictionary<long, WordData> dictionary);
 	}
 }

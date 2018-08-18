@@ -8,8 +8,8 @@ namespace SerbianEnglishDictionary.Library.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-		private NextWordChooser _nextWordChooser;
-		private IDictionary _translator;
+		private readonly NextWordChooser _nextWordChooser;
+		private readonly IDictionary _translator;
 
 		public MainViewModel(NextWordChooser nextWordChooser, IDictionary translator)
 		{
@@ -70,7 +70,6 @@ namespace SerbianEnglishDictionary.Library.ViewModels
 
         #endregion
 		
-
         private string _secondWord;
 
         public string SecondWord

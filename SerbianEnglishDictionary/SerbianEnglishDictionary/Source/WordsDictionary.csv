@@ -5,7 +5,7 @@ remind,podsetiti,0
 harm,steta,0
 harmful,stetno,0
 harmless,bezopasno,0
-beverage,napitak,0
+beverage,napitak,1
 ill,bolest,0
 poison,otrov,0
 suffering,patnja,0
@@ -57,7 +57,7 @@ muscle,misic,0
 elect,izabrati,0
 eat out,pojesti,0
 warn,upozoriti,0
-disappoint,razocarati,0
+disappoint,razocarati,1
 goal,cilj,0
 be aware,budi oprezan,0
 schedule,raspored,0
@@ -91,7 +91,7 @@ according,u skladu,0
 look after,paziti na,0
 deny,osporiti-odbiti,0
 absorb,upiti,0
-pretty much,prilično,0
+pretty much,prilično,1
 capable-able,sposoban,0
 come true,ostvariti,0
 fulfil,ispuniti,0
@@ -99,3 +99,7 @@ not even,čak ni,0
 horrible-terrible,strašno-strašno,0
 well aware,dobro upoznat-svestan,0
 patient,strpljenje,0
+waste,gubljenje,0
+leak,curenje,0
+namely,naime,0
+make sure,biti siguran-postarati se,0

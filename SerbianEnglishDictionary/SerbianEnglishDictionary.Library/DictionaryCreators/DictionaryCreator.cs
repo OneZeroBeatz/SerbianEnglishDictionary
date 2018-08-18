@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using SerbianEnglishDictionary.Library.DictionaryReaders.Base;
 using SerbianEnglishDictionary.Library.EntitiesFilters.Interface;
+using SerbianEnglishDictionary.Library.IntermediateModel;
 
 namespace SerbianEnglishDictionary.Library.DictionaryCreators
 {
@@ -15,7 +16,7 @@ namespace SerbianEnglishDictionary.Library.DictionaryCreators
 			_filter = filter;
 		}
 
-		public Dictionary<string, string> CreateDictionary()
+		public Dictionary<long, WordData> CreateDictionary()
 		{
 			var dictionary = _reader.ReadFromSource();
 			return _filter.GetFilteredEntities(dictionary);

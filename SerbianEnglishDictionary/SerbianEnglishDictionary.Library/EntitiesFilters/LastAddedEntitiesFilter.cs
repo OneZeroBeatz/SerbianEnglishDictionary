@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using SerbianEnglishDictionary.Library.EntitiesFilters.Interface;
+using SerbianEnglishDictionary.Library.IntermediateModel;
 
 namespace SerbianEnglishDictionary.Library.EntitiesFilters
 {
@@ -10,7 +11,7 @@ namespace SerbianEnglishDictionary.Library.EntitiesFilters
 		{
 		}
 
-		public override Dictionary<string, string> GetFilteredEntities(Dictionary<string, string> dictionary)
+		public override Dictionary<long, WordData> GetFilteredEntities(Dictionary<long, WordData> dictionary)
 		{
 			return dictionary.Skip(dictionary.Count - EntitiesCountLimit)
 				.Take(EntitiesCountLimit)
