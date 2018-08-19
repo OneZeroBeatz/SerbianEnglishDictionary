@@ -7,15 +7,20 @@ namespace SerbianEnglishDictionary.Library.EntitiesFilters
 {
 	public class LastAddedEntitiesFilter : EntitiesFilter
 	{
-		public LastAddedEntitiesFilter(int entitiesCountLimit) : base(entitiesCountLimit)
+		public LastAddedEntitiesFilter(int entitiesCountPercentage) : base(entitiesCountPercentage)
 		{
 		}
 
 		public override Dictionary<long, WordData> GetFilteredEntities(Dictionary<long, WordData> dictionary)
 		{
-			return dictionary.Skip(dictionary.Count - EntitiesCountLimit)
-				.Take(EntitiesCountLimit)
-				.ToDictionary(x => x.Key, y => y.Value);
+			var entitiesCountLimit = GetEntitiesCountLimit(dictionary.Count);
+
+			return dictionary.Skip(dictionary.Count - entitiesCountLimit).Take(entitiesCountLimit).ToDictionary(x => x.Key, y => y.Value);
+		}
+
+		private int GetEntitiesCountLimit(int dictionaryCount)
+		{
+			return (dictionaryCount * EntitiesCountPercentage) / 100;
 		}
 	}
 }

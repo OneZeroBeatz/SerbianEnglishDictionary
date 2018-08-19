@@ -14,7 +14,7 @@ namespace SerbianEnglishDictionary.Library.NextWordChoosers
 		public override string GetNextWord()
 		{
 			var randomWordIndex = new Random().Next() % WordsData.Count;
-			DictionaryWriter.IncrementWordChoosingsCount(randomWordIndex);
+			DictionaryWriter.IncrementWordChoosingsCount(WordsData[randomWordIndex].Index);
 			return WordsData[randomWordIndex].FirstWord;
 		}
 	}

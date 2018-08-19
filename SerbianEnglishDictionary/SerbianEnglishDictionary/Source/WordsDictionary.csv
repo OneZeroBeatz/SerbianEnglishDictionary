@@ -1,105 +1,113 @@
-clarify,pojasniti,0
-intent,namera,0
-admit,priznati,0
-remind,podsetiti,0
-harm,steta,0
-harmful,stetno,0
-harmless,bezopasno,0
-beverage,napitak,1
-ill,bolest,0
-poison,otrov,0
-suffering,patnja,0
-somehow,nekako,0
-obvious,ocigledno,0
-towards,prema,0
+clarify,pojasniti,12
+intent,namera,7
+admit,priznati,9
+remind,podsetiti,3
+harm,steta,7
+harmful,stetno,6
+harmless,bezopasno,11
+beverage,napitak,5
+ill,bolest,6
+poison,otrov,7
+suffering,patnja,7
+somehow,nekako,7
+obvious,ocigledno,3
+towards,prema,1
 grape,grožđje,0
-snail,puž,0
-proper name,vlastito ime,0
+snail,puž,2
+proper name,vlastito ime,4
 proper noun,vlastita imenica,0
-confident,samouveren,0
+confident,samouveren,3
 far above,daleko iznad,0
-competitor,takmicar,0
-dare,usuditi se,0
+competitor,takmicar,3
+dare,usuditi se,2
 prevent,sprečiti,0
-hope,nada,0
-hopeless,beznadežno,0
-torture(torča),mučenje,0
-the rest,preostalo,0
-thankless-ungrateful,nezahvalan,0
-proof,dokaz,0
+hope,nada,1
+hopeless,beznadežno,1
+torture(torča),mučenje,2
+the rest,preostalo,1
+thankless-ungrateful,nezahvalan,6
+proof,dokaz,2
 brave,hrabro,0
-suggestion,predlog,0
-habit,navika,0
-find it out,saznati,0
-ridiculous,smešno,0
-impregnable,nesavladivo,0
-violent,nasilno,0
-bald,ćelav,0
-siege,opsada,0
-throw,baciti,0
-garbage,smeće,0
-whisper,šaputati,0
-immobile,nepokretan,0
-wheat,pšenica,0
-wheel,točak,0
-steering wheel,volan,0
+suggestion,predlog,2
+habit,navika,1
+find it out,saznati,5
+ridiculous,smešno,3
+impregnable,nesavladivo,5
+violent,nasilno,2
+bald,ćelav,7
+siege,opsada,1
+throw,baciti,3
+garbage,smeće,4
+whisper,šaputati,3
+immobile,nepokretan,1
+wheat,pšenica,1
+wheel,točak,1
+steering wheel,volan,1
 honestly,iskreno,0
-roommate,cimer,0
-flows,protice,0
-negation,negacija,0
-lake,jezero,0
-artificial,veštačko,0
-sunbathing,suncanje,0
-deep,duboko,0
-flood,poplava,0
-although,iako,0
-muscle,misic,0
-elect,izabrati,0
-eat out,pojesti,0
-warn,upozoriti,0
-disappoint,razocarati,1
-goal,cilj,0
-be aware,budi oprezan,0
-schedule,raspored,0
-scheduled,planirano-dogovoreno,0
-against,protiv,0
+roommate,cimer,1
+flows,protice,1
+negation,negacija,3
+lake,jezero,2
+artificial,veštačko,1
+sunbathing,suncanje,3
+deep,duboko,6
+flood,poplava,1
+although,iako,3
+muscle,misic,5
+elect,izabrati,4
+eat out,pojesti,4
+warn,upozoriti,1
+disappoint,razocarati,2
+goal,cilj,2
+be aware,budi oprezan,2
+schedule,raspored,3
+scheduled,planirano-dogovoreno,2
+against,protiv,2
 for good,zanavek,0
-embrace,zagrli,0
+embrace,zagrli,1
 wedding dress,venčanica,0
-cunning-tricky,lukav,0
+cunning-tricky,lukav,2
 pearl,biser,0
-serve,posluziti,0
+serve,posluziti,1
 suicide,samoubistvo,0
 nightmare,košmar,0
-convisted,ubeđen,0
+convisted,ubeđen,1
 rare,retko,0
-indeed,zaista,0
-outstanding,izuzetno,0
-incredible,neverovatan,0
-accomplish,postići,0
-establish,uspostaviti,0
-stubborn,tvrdoglav,0
+indeed,zaista,2
+outstanding,izuzetno,2
+incredible,neverovatan,1
+accomplish,postići,1
+establish,uspostaviti,2
+stubborn,tvrdoglav,2
 certain,izvesno,0
-get away-еscape,pobeći,0
+get away-еscape,pobeći,1
 empty handed,praznih ruku,0
-to withstand,izdržati,0
-indestructible,neuništiv,0
-pay attention,obratiti pažnju,0
-refer to,odnositi se,0
+to withstand,izdržati,1
+indestructible,neuništiv,1
+pay attention,obratiti pažnju,3
+refer to,odnositi se,3
 slow down,uspori,0
-according,u skladu,0
-look after,paziti na,0
-deny,osporiti-odbiti,0
-absorb,upiti,0
-pretty much,prilično,1
+according,u skladu,1
+look after,paziti na,1
+deny,osporiti-odbiti,1
+absorb,upiti,1
+pretty much,prilično,2
 capable-able,sposoban,0
 come true,ostvariti,0
 fulfil,ispuniti,0
-not even,čak ni,0
-horrible-terrible,strašno-strašno,0
+not even,čak ni,1
+horrible-terrible,strašno,1
 well aware,dobro upoznat-svestan,0
-patient,strpljenje,0
-waste,gubljenje,0
-leak,curenje,0
+patient,strpljenje,1
+waste,gubljenje,2
+leak,curenje,1
 namely,naime,0
-make sure,biti siguran-postarati se,0
+make sure,biti siguran-postarati se,2
+used to be,nekad bilo,0
+figure out,skontati,0
+common sense,zdrav razum,0
+vanish,nestati,1
+underestimate,potceniti,1
+consequence,posledica,0
+handsome,zgodan,1
+coincidence,slučajnost,0

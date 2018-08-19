@@ -32,7 +32,7 @@ namespace SerbianEnglishDictionary
 
 		public EntitiesFilterType EntitiesFilterType => GetEntitiesFilterType("EntitiesFilterType");
 
-		public int EntitiesCountLimit => GetEntitiesCountLimit("EntitiesCountLimit");
+		public int EntitiesCountPercentage => GetEntitiesCountPercentage("EntitiesCountPercentage");
 
 
 		#endregion
@@ -70,14 +70,14 @@ namespace SerbianEnglishDictionary
 			throw new Exception("Cannot parse config file");
 		}
 
-		private static int GetEntitiesCountLimit(string key)
+		private static int GetEntitiesCountPercentage(string key)
 		{
-			var currentEntitiesCountLimit = ConfigurationManager.AppSettings[key];
+			var currentEntitiesCountPercentage = ConfigurationManager.AppSettings[key];
 
-			int entitiesCountLimit;
-			if (Int32.TryParse(currentEntitiesCountLimit, out entitiesCountLimit))
+			int entitiesCountPercentage;
+			if (Int32.TryParse(currentEntitiesCountPercentage, out entitiesCountPercentage))
 			{
-				return entitiesCountLimit;
+				return entitiesCountPercentage;
 			}
 
 			throw new Exception("Cannot parse config file");

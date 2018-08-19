@@ -5,11 +5,11 @@ namespace SerbianEnglishDictionary.Library.EntitiesFilters.Interface
 {
 	public abstract class EntitiesFilter
 	{
-		protected readonly int EntitiesCountLimit;
+		protected readonly int EntitiesCountPercentage;
 
-		protected EntitiesFilter(int entitiesCountLimit)
+		protected EntitiesFilter(int entitiesCountPercentage)
 		{
-			EntitiesCountLimit = entitiesCountLimit;
+			EntitiesCountPercentage = entitiesCountPercentage;
 		}
 
 		public abstract Dictionary<long, WordData> GetFilteredEntities(Dictionary<long, WordData> dictionary);
