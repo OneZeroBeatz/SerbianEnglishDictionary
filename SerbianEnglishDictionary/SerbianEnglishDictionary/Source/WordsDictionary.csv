@@ -58,7 +58,7 @@ elect,izabrati,4
 eat out,pojesti,4
 warn,upozoriti,1
 disappoint,razocarati,2
-goal,cilj,2
+goal-aim,cilj,2
 be aware,budi oprezan,2
 schedule,raspored,3
 scheduled,planirano-dogovoreno,2
@@ -71,7 +71,7 @@ pearl,biser,0
 serve,posluziti,1
 suicide,samoubistvo,0
 nightmare,košmar,0
-convisted,ubeđen,1
+convicted,osuđen,1
 rare,retko,0
 indeed,zaista,2
 outstanding,izuzetno,2
@@ -93,7 +93,7 @@ deny,osporiti-odbiti,1
 absorb,upiti,1
 pretty much,prilično,2
 capable-able,sposoban,0
-come true,ostvariti,0
+come true-realize,ostvariti,0
 fulfil,ispuniti,0
 not even,čak ni,1
 horrible-terrible,strašno,1
@@ -104,10 +104,27 @@ leak,curenje,1
 namely,naime,0
 make sure,biti siguran-postarati se,2
 used to be,nekad bilo,0
-figure out,skontati,0
-common sense,zdrav razum,0
-vanish,nestati,1
-underestimate,potceniti,1
-consequence,posledica,0
-handsome,zgodan,1
+figure out,skontati,1
+common sense,zdrav razum,3
+vanish,nestati,3
+underestimate,potceniti,5
+consequence,posledica,4
+handsome,zgodan,3
 coincidence,slučajnost,0
+selfish-selfcentered,sebičan,5
+complain-appeal,žaliti se,0
+attitude,stav,0
+familiar,upoznat,0
+doubt,sumnja,0
+imagine,zamišljati,0
+coward,kukavica,0
+concern,zabrinutost,0
+appear,pojaviti se,0
+disappear,nestati,0
+carry out,sprovesti-izvršiti,0
+convinse,ubediti,0
+convinsed,ubeđen,0
+watch over,paziti na,0
+resistance,otpornost,0
+get to know-to meet,upoznati,0
+fear,strah,0
