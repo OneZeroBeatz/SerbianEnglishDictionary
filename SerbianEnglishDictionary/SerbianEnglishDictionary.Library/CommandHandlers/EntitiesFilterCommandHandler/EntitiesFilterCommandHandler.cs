@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using SerbianEnglishDictionary.Library.Enums;
 using SerbianEnglishDictionary.Library.EntitiesFilters.Interface;
 
@@ -18,7 +19,7 @@ namespace SerbianEnglishDictionary.Library.CommandHandlers.EntitiesFilterCommand
 			if (!_entitiesFilterMap.ContainsKey(entitiesFilterType))
 				_entitiesFilterMap.Add(entitiesFilterType, concreteEntitiesFilter);
 			else
-				System.Console.WriteLine("Translation type {0} is already registered", entitiesFilterType);
+				Console.WriteLine("Translation type {0} is already registered", entitiesFilterType);
 		}
 
 		public EntitiesFilter GetEntitiesFilter(EntitiesFilterType entitiesFilterType)

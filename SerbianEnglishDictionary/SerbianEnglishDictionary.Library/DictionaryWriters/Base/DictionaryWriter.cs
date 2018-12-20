@@ -1,6 +1,8 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
+using System.Linq;
 
-namespace SerbianEnglishDictionary.Library.DictionaryWritters.Base
+namespace SerbianEnglishDictionary.Library.DictionaryWriters.Base
 {
 	public class DictionaryWriter
 	{
@@ -11,7 +13,16 @@ namespace SerbianEnglishDictionary.Library.DictionaryWritters.Base
 			_dictionaryPath = dictionaryPath;
 		}
 
-		public void IncrementWordChoosingsCount(long lineIndex)
+		public void AddEntity(Tuple<string, string> entity)
+		{
+			using (var writer = File.AppendText(_dictionaryPath))
+			{
+				//TODO: Add check if entity exists and add apropriate pair if just one word is same
+				writer.WriteLine(string.Format("{0},{1},0", entity.Item1, entity.Item2));
+			}	
+		}
+
+		public void IncrementEntityChoosingTimesCount(long lineIndex)
 		{
 			var lines = File.ReadAllLines(_dictionaryPath);
 			using (var writer = new StreamWriter(_dictionaryPath))
@@ -30,7 +41,6 @@ namespace SerbianEnglishDictionary.Library.DictionaryWritters.Base
 					}
 				}
 			}
-
 		}
 	}
 }

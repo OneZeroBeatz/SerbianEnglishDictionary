@@ -1,4 +1,4 @@
-﻿using SerbianEnglishDictionary.Library.DictionaryWritters.Base;
+﻿using SerbianEnglishDictionary.Library.DictionaryWriters.Base;
 
 namespace SerbianEnglishDictionary.Initializers.DictionaryWriters
 {

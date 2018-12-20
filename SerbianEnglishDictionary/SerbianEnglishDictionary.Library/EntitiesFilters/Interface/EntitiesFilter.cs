@@ -15,3 +15,4 @@ namespace SerbianEnglishDictionary.Library.EntitiesFilters.Interface
 		public abstract Dictionary<long, WordData> GetFilteredEntities(Dictionary<long, WordData> dictionary);
 	}
 }
+

@@ -50,8 +50,9 @@
     <Compile Include="DictionaryReaders\SerbianToEnglishDictionaryReader.cs" />
     <Compile Include="DictionaryWriters\Base\DictionaryWriter.cs" />
     <Compile Include="EntitiesFilters\AllEntitiesFilter.cs" />
-    <Compile Include="EntitiesFilters\Interface\IEntitiesFilter.cs" />
+    <Compile Include="EntitiesFilters\Interface\EntitiesFilter.cs" />
     <Compile Include="EntitiesFilters\LastAddedEntitiesFilter.cs" />
+    <Compile Include="EntityBuilders\EntityBuilder.cs" />
     <Compile Include="Enums\DictionaryType.cs" />
     <Compile Include="Enums\EntitiesFilter.cs" />
     <Compile Include="Enums\TranslationWay.cs" />

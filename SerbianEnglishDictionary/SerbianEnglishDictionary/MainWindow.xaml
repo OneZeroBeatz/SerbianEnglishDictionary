@@ -5,17 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SerbianEnglishDictionary"
         mc:Ignorable="d"
-        Title="MainWindow" Height="178.723" Width="525">
+        Title="MainWindow" Height="202.619" Width="515.044">
 	<Grid Margin="0,0,2,-1">
-		<Button Command="{Binding ConfirmAnswerCommand}" x:Name="Confirm" Content="Confirm" HorizontalAlignment="Left" Margin="200,116,0,0" VerticalAlignment="Top" Width="98"/>
-		<Button Command="{Binding NextWordCommand}" x:Name="NextButton" Content="Next" HorizontalAlignment="Left" Margin="200,91,0,0" VerticalAlignment="Top" Width="98"/>
-		<Button Command="{Binding ShowAnswerCommand}" x:Name="ShowButton" Content="Show" HorizontalAlignment="Left" Margin="200,66,0,0" VerticalAlignment="Top" Width="98"/>
 		<Button x:Name="SwapLanguagesButton" Content="Swap Languages" HorizontalAlignment="Left" Margin="200,41,0,0" VerticalAlignment="Top" Width="98" RenderTransformOrigin="0.383,0.687"/>
-		<TextBox Text="{Binding FirstWord, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="WordToGuessTextBox" HorizontalAlignment="Left" Height="95" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185"/>
-		<TextBox Text="{Binding SecondWord, Mode=OneWay}" x:Name="AnswerTextBox" HorizontalAlignment="Left" Height="95" Margin="303,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+		<Button Command="{Binding ShowAnswerCommand}" x:Name="ShowButton" Content="Show" HorizontalAlignment="Left" Margin="200,66,0,0" VerticalAlignment="Top" Width="98"/>
+		<Button Command="{Binding ConfirmAnswerCommand}" x:Name="Confirm" Content="Confirm" HorizontalAlignment="Left" Margin="200,141,0,0" VerticalAlignment="Top" Width="98"/>
+		<Button Command="{Binding SaveEntityCommand}" x:Name="Save" Content="Save" HorizontalAlignment="Left" Margin="200,91,0,0" VerticalAlignment="Top" Width="98" RenderTransformOrigin="0.383,0.687"/>
+		<Button Command="{Binding NextWordCommand}" x:Name="NextButton" Content="Next" HorizontalAlignment="Left" Margin="200,116,0,0" VerticalAlignment="Top" Width="98"/>
+		<TextBox Text="{Binding FirstWord, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="WordToGuessTextBox" HorizontalAlignment="Left" Height="120" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185"/>
+		<TextBox Text="{Binding SecondWord, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="AnswerTextBox" HorizontalAlignment="Left" Height="120" Margin="303,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191"/>
 		<Label x:Name="WortToGuessLanguageLabel" Content="Label" HorizontalAlignment="Left" Margin="157,10,0,0" VerticalAlignment="Top"/>
 		<Label x:Name="AnswerLanguageLabel" Content="Label" HorizontalAlignment="Left" Margin="303,10,0,0" VerticalAlignment="Top"/>
 		<Label x:Name="To" Content="To" HorizontalAlignment="Left" Margin="239,10,0,0" VerticalAlignment="Top"/>
-
+		
 	</Grid>
 </Window>

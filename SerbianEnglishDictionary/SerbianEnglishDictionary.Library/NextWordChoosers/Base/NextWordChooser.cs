@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using SerbianEnglishDictionary.Library.Dictionaries.Interface;
-using SerbianEnglishDictionary.Library.DictionaryWritters.Base;
+using SerbianEnglishDictionary.Library.DictionaryWriters.Base;
 using SerbianEnglishDictionary.Library.IntermediateModel;
 
 namespace SerbianEnglishDictionary.Library.NextWordChoosers.Base

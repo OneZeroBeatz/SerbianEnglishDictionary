@@ -2,6 +2,8 @@
 using SerbianEnglishDictionary.Library.ViewModels.Base;
 using System.Windows.Input;
 using SerbianEnglishDictionary.Library.Dictionaries.Interface;
+using SerbianEnglishDictionary.Library.DictionaryWriters.Base;
+using SerbianEnglishDictionary.Library.EntityBuilders;
 using SerbianEnglishDictionary.Library.NextWordChoosers.Base;
 
 namespace SerbianEnglishDictionary.Library.ViewModels
@@ -10,11 +12,16 @@ namespace SerbianEnglishDictionary.Library.ViewModels
     {
 		private readonly NextWordChooser _nextWordChooser;
 		private readonly IDictionary _translator;
+	    private readonly DictionaryWriter _dictionaryWriter;
+	    private readonly EntityBuilder _entityBuilder;
 
-		public MainViewModel(NextWordChooser nextWordChooser, IDictionary translator)
+
+		public MainViewModel(NextWordChooser nextWordChooser, IDictionary translator, DictionaryWriter dictionaryWriter, EntityBuilder entityBuilder)
 		{
 			_nextWordChooser = nextWordChooser;
 			_translator = translator;
+			_dictionaryWriter = dictionaryWriter;
+			_entityBuilder = entityBuilder;
 		}
 
 		#region Show Answer Command
@@ -68,9 +75,39 @@ namespace SerbianEnglishDictionary.Library.ViewModels
 
         }
 
-        #endregion
-		
-        private string _secondWord;
+		#endregion
+
+		#region Save Entity Command
+
+		private ICommand _saveEntityCommand;
+
+		public ICommand SaveEntityCommand
+		{
+			get
+			{
+				if (_saveEntityCommand == null)
+				{
+					_saveEntityCommand = new RelayCommand(SaveEntityExecute, SaveEntityCanExecute);
+				}
+				return _saveEntityCommand;
+			}
+		}
+
+		public void SaveEntityExecute(object obj)
+		{
+			var entity = _entityBuilder.GetEntity(FirstWord, SecondWord);
+			_dictionaryWriter.AddEntity(entity);
+			FirstWord = "";
+			SecondWord = "";
+		}
+
+		public bool SaveEntityCanExecute(object obj)
+		{
+			return !string.IsNullOrWhiteSpace(FirstWord) && !string.IsNullOrWhiteSpace(SecondWord);
+		}
+		#endregion
+
+		private string _secondWord;
 
         public string SecondWord
         {
