@@ -1,0 +1,5 @@
+D:\Programming\Apps\SerbianEnglishDictionary\SerbianEnglishDictionary\SerbianEnglishDictionary.Library\bin\Debug\SerbianEnglishDictionary.Library.dll
+D:\Programming\Apps\SerbianEnglishDictionary\SerbianEnglishDictionary\SerbianEnglishDictionary.Library\bin\Debug\SerbianEnglishDictionary.Library.pdb
+D:\Programming\Apps\SerbianEnglishDictionary\SerbianEnglishDictionary\SerbianEnglishDictionary.Library\obj\Debug\SerbianEnglishDictionary.Library.csprojResolveAssemblyReference.cache
+D:\Programming\Apps\SerbianEnglishDictionary\SerbianEnglishDictionary\SerbianEnglishDictionary.Library\obj\Debug\SerbianEnglishDictionary.Library.dll
+D:\Programming\Apps\SerbianEnglishDictionary\SerbianEnglishDictionary\SerbianEnglishDictionary.Library\obj\Debug\SerbianEnglishDictionary.Library.pdb

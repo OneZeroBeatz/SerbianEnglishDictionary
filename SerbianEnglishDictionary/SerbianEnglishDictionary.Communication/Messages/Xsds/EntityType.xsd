@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ns1="http://localhost/ReceiveEntityService/entityType"	
+           targetNamespace="http://localhost/ReceiveEntityService/entityType"	
+					 elementFormDefault="qualified" 
+           attributeFormDefault="unqualified">
+	
+	<xs:simpleType name="EntityType" final="restriction">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Words"/>
+			<xs:enumeration value="Phrases"/>
+			<xs:enumeration value="Sentences"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

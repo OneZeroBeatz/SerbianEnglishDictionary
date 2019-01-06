@@ -1,10 +1,10 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
+using SerbianEnglishDictionary.Library.DictionaryWriters.Interface;
 
 namespace SerbianEnglishDictionary.Library.DictionaryWriters.Base
 {
-	public class DictionaryWriter
+	public class DictionaryWriter : IDictionaryWriter
 	{
 		private readonly string _dictionaryPath;
 

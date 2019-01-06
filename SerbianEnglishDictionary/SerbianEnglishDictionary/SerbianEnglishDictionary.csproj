@@ -43,6 +43,7 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -78,6 +79,7 @@
     <Compile Include="Initializers\EntitiesFilters\EntitiesFilterInitializer.cs" />
     <Compile Include="Initializers\EntityBuilders\EntityBuilderInitializer.cs" />
     <Compile Include="Initializers\NextWordChoosers\NextWordChooserInitializer.cs" />
+    <Compile Include="Initializers\ServiceHosts\ReceiveEntityServiceHostInitializer.cs" />
     <Compile Include="Initializers\Translators\DictionaryInitializer.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -114,6 +116,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SerbianEnglishDictionary.Communication\SerbianEnglishDictionary.Communication.csproj">
+      <Project>{eaac104f-962e-455c-8083-4669a6a548ee}</Project>
+      <Name>SerbianEnglishDictionary.Communication</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SerbianEnglishDictionary.Library\SerbianEnglishDictionary.Library.csproj">
       <Project>{2866CE41-6AD9-4EAE-BCD9-DF31FDDEEC2B}</Project>
       <Name>SerbianEnglishDictionary.Library</Name>

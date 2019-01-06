@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:et="http://localhost/ReceiveEntityService/entityType"
+           xmlns:ns1="http://localhost/ReceiveEntityService/"
+           targetNamespace="http://localhost/ReceiveEntityService/"
+           elementFormDefault="qualified">
+	
+	<xs:import namespace="http://localhost/ReceiveEntityService/entityType" schemaLocation="EntityType.xsd"/>
+	<xs:element name = "Entity">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name = "EnglishEntity" type="xs:string"/>
+				<xs:element name = "SerbianEntity" type="xs:string"/>
+				<xs:element name = "Type" type="et:EntityType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
