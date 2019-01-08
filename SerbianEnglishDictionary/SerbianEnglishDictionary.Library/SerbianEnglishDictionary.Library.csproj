@@ -49,6 +49,7 @@
     <Compile Include="DictionaryReaders\EnglishToSerbianDictionaryReader.cs" />
     <Compile Include="DictionaryReaders\SerbianToEnglishDictionaryReader.cs" />
     <Compile Include="DictionaryWriters\Base\DictionaryWriter.cs" />
+    <Compile Include="DictionaryWriters\Interface\IDictionaryWriter.cs" />
     <Compile Include="EntitiesFilters\AllEntitiesFilter.cs" />
     <Compile Include="EntitiesFilters\Interface\EntitiesFilter.cs" />
     <Compile Include="EntitiesFilters\LastAddedEntitiesFilter.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Enums\EntitiesFilter.cs" />
     <Compile Include="Enums\TranslationWay.cs" />
     <Compile Include="IntermediateModel\WordData.cs" />
+    <Compile Include="Maps\DictionaryTypeToPathMap.cs" />
     <Compile Include="NextWordChoosers\Base\NextWordChooser.cs" />
     <Compile Include="NextWordChoosers\RandomNextWordChooser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

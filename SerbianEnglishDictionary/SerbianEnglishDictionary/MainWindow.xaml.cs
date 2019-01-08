@@ -28,7 +28,8 @@ namespace SerbianEnglishDictionary
 			DataContext = new MainViewModel(NextWordChooserInitializer.GetChooser(), 
 											DictionaryInitializer.GetDictionary(),
 											DictionaryWriterInitializer.GetWriter(), 
-											EntityBuilderInitializer.GetEntityBuilder());
+											EntityBuilderInitializer.GetEntityBuilder(),
+											Config.Instance.DictionaryType);
 		}
 	}
 }

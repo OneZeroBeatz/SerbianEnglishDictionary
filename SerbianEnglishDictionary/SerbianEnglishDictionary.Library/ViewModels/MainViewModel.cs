@@ -4,6 +4,7 @@ using System.Windows.Input;
 using SerbianEnglishDictionary.Library.Dictionaries.Interface;
 using SerbianEnglishDictionary.Library.DictionaryWriters.Base;
 using SerbianEnglishDictionary.Library.EntityBuilders;
+using SerbianEnglishDictionary.Library.Enums;
 using SerbianEnglishDictionary.Library.NextWordChoosers.Base;
 
 namespace SerbianEnglishDictionary.Library.ViewModels
@@ -14,14 +15,16 @@ namespace SerbianEnglishDictionary.Library.ViewModels
 		private readonly IDictionary _translator;
 	    private readonly DictionaryWriter _dictionaryWriter;
 	    private readonly EntityBuilder _entityBuilder;
+	    private readonly DictionaryType _dictionaryType;
 
 
-		public MainViewModel(NextWordChooser nextWordChooser, IDictionary translator, DictionaryWriter dictionaryWriter, EntityBuilder entityBuilder)
+		public MainViewModel(NextWordChooser nextWordChooser, IDictionary translator, DictionaryWriter dictionaryWriter, EntityBuilder entityBuilder, DictionaryType dictionaryType)
 		{
 			_nextWordChooser = nextWordChooser;
 			_translator = translator;
 			_dictionaryWriter = dictionaryWriter;
 			_entityBuilder = entityBuilder;
+			_dictionaryType = dictionaryType;
 		}
 
 		#region Show Answer Command
@@ -96,7 +99,7 @@ namespace SerbianEnglishDictionary.Library.ViewModels
 		public void SaveEntityExecute(object obj)
 		{
 			var entity = _entityBuilder.GetEntity(FirstWord, SecondWord);
-			_dictionaryWriter.AddEntity(entity);
+			_dictionaryWriter.AddEntity(entity, _dictionaryType);
 			FirstWord = "";
 			SecondWord = "";
 		}

@@ -26,7 +26,7 @@ namespace SerbianEnglishDictionary
 
 		#region Properties
 
-		public string DictionaryPath => GetDictionaryPath("DictionaryPath");
+		public DictionaryType DictionaryType => GetDictionaryType();
 
 		public TranslationWay TranslationWay => GetTrasnlationWay("TranslationWay");
 
@@ -39,9 +39,17 @@ namespace SerbianEnglishDictionary
 
 		#region Private methods
 
-		private static string GetDictionaryPath(string key)
+		private static DictionaryType GetDictionaryType()
 		{
-			return ConfigurationManager.AppSettings[key];
+			var currentDictionaryType = ConfigurationManager.AppSettings["DictionaryType"];
+
+			DictionaryType dictionaryType;
+			if (Enum.TryParse(currentDictionaryType, out dictionaryType))
+			{
+				return dictionaryType;
+			}
+
+			throw new Exception("Cannot parse config file");
 		}
 
 		private static TranslationWay GetTrasnlationWay(string key)

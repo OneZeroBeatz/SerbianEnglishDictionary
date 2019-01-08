@@ -1,4 +1,5 @@
-﻿using SerbianEnglishDictionary.Library.DictionaryWriters.Base;
+﻿using SerbianEnglishDictionary.Initializers.Maps;
+using SerbianEnglishDictionary.Library.DictionaryWriters.Base;
 
 namespace SerbianEnglishDictionary.Initializers.DictionaryWriters
 {
@@ -8,8 +9,11 @@ namespace SerbianEnglishDictionary.Initializers.DictionaryWriters
 
 		public static DictionaryWriter GetWriter()
 		{
-			if (_dictionaryWriter == null)
-				_dictionaryWriter = new DictionaryWriter(Config.Instance.DictionaryPath);
+			if (_dictionaryWriter != null)
+				return _dictionaryWriter;
+
+			var dictionaryTypeToPathMap = DictionaryTypeToPathMapInitializer.GetMap();
+			_dictionaryWriter = new DictionaryWriter(dictionaryTypeToPathMap.GetDictionaryPath(Config.Instance.DictionaryType));
 			return _dictionaryWriter;
 		}
 	}

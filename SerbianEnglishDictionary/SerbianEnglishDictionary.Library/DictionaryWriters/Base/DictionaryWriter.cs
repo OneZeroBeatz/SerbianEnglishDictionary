@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using SerbianEnglishDictionary.Library.DictionaryWriters.Interface;
+using SerbianEnglishDictionary.Library.Enums;
 
 namespace SerbianEnglishDictionary.Library.DictionaryWriters.Base
 {
@@ -13,7 +14,7 @@ namespace SerbianEnglishDictionary.Library.DictionaryWriters.Base
 			_dictionaryPath = dictionaryPath;
 		}
 
-		public void AddEntity(Tuple<string, string> entity)
+		public void AddEntity(Tuple<string, string> entity, DictionaryType dictionaryType)
 		{
 			using (var writer = File.AppendText(_dictionaryPath))
 			{

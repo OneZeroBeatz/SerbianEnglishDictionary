@@ -2,7 +2,8 @@
 {
 	public enum DictionaryType
 	{
-		WordDictionary,
-		PhraseDictionary
+		WordsDictionary,
+		PhrasesDictionary,
+		SentencesDictionary
 	}
 }

@@ -54,7 +54,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceHosts\ReceiveEntityServiceHost.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SerbianEnglishDictionary.Library\SerbianEnglishDictionary.Library.csproj">
+      <Project>{2866ce41-6ad9-4eae-bcd9-df31fddeec2b}</Project>
+      <Name>SerbianEnglishDictionary.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Messages\Xsds\ResponseResult.xsd">
       <SubType>Designer</SubType>

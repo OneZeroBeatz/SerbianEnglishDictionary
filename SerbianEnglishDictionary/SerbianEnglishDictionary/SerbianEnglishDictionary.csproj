@@ -78,6 +78,7 @@
     </Compile>
     <Compile Include="Initializers\EntitiesFilters\EntitiesFilterInitializer.cs" />
     <Compile Include="Initializers\EntityBuilders\EntityBuilderInitializer.cs" />
+    <Compile Include="Initializers\Maps\DictionaryTypeToPathMapInitializer.cs" />
     <Compile Include="Initializers\NextWordChoosers\NextWordChooserInitializer.cs" />
     <Compile Include="Initializers\ServiceHosts\ReceiveEntityServiceHostInitializer.cs" />
     <Compile Include="Initializers\Translators\DictionaryInitializer.cs" />
