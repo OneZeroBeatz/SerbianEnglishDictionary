@@ -18,7 +18,7 @@ namespace SerbianEnglishDictionary.Initializers.Maps
 			var dictionaryTypeToPathMap = new Dictionary<DictionaryType, string>
 			{
 				{DictionaryType.WordsDictionary, "../../Source/WordsDictionary.csv"},
-				{DictionaryType.SentencesDictionary, "../../Source/SendencesDictionary.csv"},
+				{DictionaryType.SentencesDictionary, "../../Source/SentencesDictionary.csv"},
 				{DictionaryType.PhrasesDictionary, "../../Source/PhrasesDictionary.csv"}
 			};
 
