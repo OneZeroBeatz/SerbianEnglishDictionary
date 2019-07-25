@@ -14,5 +14,3 @@ D:\Programming\Apps\SerbianEnglishDictionary\SerbianEnglishDictionary\SerbianEng
 D:\Programming\Apps\SerbianEnglishDictionary\SerbianEnglishDictionary\SerbianEnglishDictionary\obj\Debug\SerbianEnglishDictionary.csproj.GenerateResource.Cache
 D:\Programming\Apps\SerbianEnglishDictionary\SerbianEnglishDictionary\SerbianEnglishDictionary\obj\Debug\SerbianEnglishDictionary.exe
 D:\Programming\Apps\SerbianEnglishDictionary\SerbianEnglishDictionary\SerbianEnglishDictionary\obj\Debug\SerbianEnglishDictionary.pdb
-D:\Programming\Apps\SerbianEnglishDictionary\SerbianEnglishDictionary\SerbianEnglishDictionary\bin\Debug\SerbianEnglishDictionary.Communication.dll
-D:\Programming\Apps\SerbianEnglishDictionary\SerbianEnglishDictionary\SerbianEnglishDictionary\bin\Debug\SerbianEnglishDictionary.Communication.pdb

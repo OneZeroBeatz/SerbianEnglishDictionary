@@ -27,7 +27,7 @@ namespace SerbianEnglishDictionary.Initializers.ServiceHosts
 				_service = new ReceiveEntityServiceHost(dictionaryWriter, entityTypeToDictionaryTypeMap);
 			}
 
-			var servicehost = new ServiceHost(_service, new Uri("http://localhost/ReceiveEntityService"));
+			var servicehost = new ServiceHost(_service, new Uri("http://localhost:8083/ReceiveEntityService"));
 			servicehost.Open();
 		}
 	}

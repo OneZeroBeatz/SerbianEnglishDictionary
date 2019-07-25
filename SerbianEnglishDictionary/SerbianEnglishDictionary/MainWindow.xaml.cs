@@ -4,7 +4,6 @@ using SerbianEnglishDictionary.Library.ViewModels;
 using System.Windows;
 using SerbianEnglishDictionary.Initializers.DictionaryWriters;
 using SerbianEnglishDictionary.Initializers.EntityBuilders;
-using SerbianEnglishDictionary.Initializers.ServiceHosts;
 
 namespace SerbianEnglishDictionary
 {
@@ -24,7 +23,7 @@ namespace SerbianEnglishDictionary
 		private void InitializeComponentExt()
 		{
 			//TODO: Move Main view model from here
-			ReceiveEntityServiceHostInitializer.Initialize();
+			//ReceiveEntityServiceHostInitializer.Initialize();
 			DataContext = new MainViewModel(NextWordChooserInitializer.GetChooser(), 
 											DictionaryInitializer.GetDictionary(),
 											DictionaryWriterInitializer.GetWriter(), 

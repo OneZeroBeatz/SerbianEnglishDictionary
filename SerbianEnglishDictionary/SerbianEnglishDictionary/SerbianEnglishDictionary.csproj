@@ -80,7 +80,6 @@
     <Compile Include="Initializers\EntityBuilders\EntityBuilderInitializer.cs" />
     <Compile Include="Initializers\Maps\DictionaryTypeToPathMapInitializer.cs" />
     <Compile Include="Initializers\NextWordChoosers\NextWordChooserInitializer.cs" />
-    <Compile Include="Initializers\ServiceHosts\ReceiveEntityServiceHostInitializer.cs" />
     <Compile Include="Initializers\Translators\DictionaryInitializer.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -117,16 +116,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SerbianEnglishDictionary.Communication\SerbianEnglishDictionary.Communication.csproj">
-      <Project>{eaac104f-962e-455c-8083-4669a6a548ee}</Project>
-      <Name>SerbianEnglishDictionary.Communication</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SerbianEnglishDictionary.Library\SerbianEnglishDictionary.Library.csproj">
       <Project>{2866CE41-6AD9-4EAE-BCD9-DF31FDDEEC2B}</Project>
       <Name>SerbianEnglishDictionary.Library</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Initializers\ServiceHosts\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
