@@ -22,7 +22,7 @@ namespace SerbianEnglishDictionary.Initializers.CommandHandlers.EntitiesFilterCo
 
 			_entitiesFilterCommandHandler = new EntitiesFilterCommandHandler();
 
-			_entitiesFilterCommandHandler.Register(EntitiesFilterType.All, new AllEntitiesFilter(Config.Instance.EntitiesCountPercentage));
+			_entitiesFilterCommandHandler.Register(EntitiesFilterType.All, new AllEntitiesFilter());
 			_entitiesFilterCommandHandler.Register(EntitiesFilterType.LastAdded,new LastAddedEntitiesFilter(Config.Instance.EntitiesCountPercentage));
 
 			return _entitiesFilterCommandHandler;

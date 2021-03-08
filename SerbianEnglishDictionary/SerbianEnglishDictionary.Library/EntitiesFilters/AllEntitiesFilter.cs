@@ -6,7 +6,7 @@ namespace SerbianEnglishDictionary.Library.EntitiesFilters
 {
 	public class AllEntitiesFilter : EntitiesFilter
 	{
-		public AllEntitiesFilter(int entitiesCountPercentage) : base(entitiesCountPercentage)
+		public AllEntitiesFilter() : base(100)
 		{
 		}
 
